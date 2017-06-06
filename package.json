@@ -1,0 +1,63 @@
+{
+  "name": "micro-stats",
+  "description": "Stats",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
+    "standard-fix": "standard --fix",
+    "start": "micro",
+    "now-deploy": "npm test && now --npm -E production.env && now alias"
+  },
+  "keywords": [
+    "microservice",
+    "micro",
+    "stats",
+    "Telemark fylkeskommune"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/telemark/stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/telemark/stats/issues"
+  },
+  "homepage": "https://github.com/telemark/stats",
+  "now": {
+    "alias": [
+      "stats.service.t-fk.no"
+    ],
+    "type": "npm"
+  },
+  "devDependencies": {
+    "ava": "0.19.1",
+    "axios": "0.16.2",
+    "coveralls": "2.13.1",
+    "nsp": "2.6.3",
+    "nyc": "11.0.2",
+    "standard": "10.0.2",
+    "test-listen": "1.0.2"
+  },
+  "dependencies": {
+    "jsonwebtoken": "7.4.1",
+    "marked": "0.3.6",
+    "micro": "7.3.3",
+    "micro-match": "0.1.2",
+    "mongojs": "2.4.0",
+    "winston": "2.3.1",
+    "winston-papertrail": "1.0.5"
+  }
+}
