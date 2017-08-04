@@ -1,7 +1,7 @@
 {
   "name": "micro-stats",
   "description": "Stats",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "private": true,
   "author": {
@@ -52,7 +52,7 @@
     "test-listen": "1.0.2"
   },
   "dependencies": {
-    "jsonwebtoken": "7.4.2",
+    "jsonwebtoken": "7.4.1",
     "marked": "0.3.6",
     "micro": "7.3.3",
     "micro-match": "0.1.2",
