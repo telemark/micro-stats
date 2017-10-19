@@ -1,5 +1,5 @@
 const readFileSync = require('fs').readFileSync
-const marked = require('marked')
+const md = require('markdown-it')()
 const { parse } = require('url')
 const { json, send } = require('micro')
 const match = require('micro-match')
@@ -41,7 +41,7 @@ module.exports = async (request, response) => {
     }
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
-    result = await marked(readme)
+    result = md.render(readme)
   }
   let status = result.error ? 500 : 200
   response.setHeader('Access-Control-Allow-Origin', '*')
