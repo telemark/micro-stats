@@ -1,7 +1,7 @@
 {
   "name": "micro-stats",
   "description": "Stats",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "private": true,
   "author": {
@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.7.0"
+    "node": ">=8.9.1"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -36,7 +36,7 @@
   "bugs": {
     "url": "https://github.com/telemark/stats/issues"
   },
-  "homepage": "https://github.com/telemark/stats",
+  "homepage": "https://github.com/telemark/stats#readme",
   "now": {
     "alias": [
       "stats.service.t-fk.no"
