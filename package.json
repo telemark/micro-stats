@@ -57,7 +57,7 @@
   "dependencies": {
     "jsonwebtoken": "8.1.0",
     "markdown-it": "8.4.0",
-    "micro": "9.0.1",
+    "micro": "9.0.2",
     "micro-match": "0.1.2",
     "mongojs": "2.4.0",
     "winston": "2.4.0",
