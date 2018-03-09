@@ -60,7 +60,7 @@
     "micro": "9.1.0",
     "micro-match": "0.1.2",
     "mongojs": "2.5.0",
-    "winston": "2.4.0",
+    "winston": "3.0.0-rc2",
     "winston-papertrail": "1.0.5"
   }
 }
