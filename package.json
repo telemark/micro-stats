@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.9.1"
+    "node": ">=10.9.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -21,7 +21,8 @@
     "standard-fix": "standard --fix",
     "start": "micro",
     "dev": "micro-dev",
-    "now-deploy": "npm test && now --npm && now alias"
+    "now-deploy": "npm test && now --npm && now alias",
+    "refresh": "rm -rf node_mdoules && rm package-lock.json && npm install"
   },
   "keywords": [
     "microservice",
@@ -31,12 +32,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/telemark/stats.git"
+    "url": "https://github.com/telemark/micro-stats.git"
   },
   "bugs": {
-    "url": "https://github.com/telemark/stats/issues"
+    "url": "https://github.com/telemark/micro-stats/issues"
   },
-  "homepage": "https://github.com/telemark/stats#readme",
+  "homepage": "https://github.com/telemark/micro-stats#readme",
   "now": {
     "alias": [
       "stats.service.t-fk.no"
@@ -60,7 +61,7 @@
     "micro": "9.3.3",
     "micro-match": "0.2.0",
     "mongojs": "2.6.0",
-    "winston": "3.0.0",
+    "winston": "2.4.4",
     "winston-papertrail": "1.0.5"
   }
 }
