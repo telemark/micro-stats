@@ -1,0 +1,17 @@
+{
+  "name": "micro-stats",
+  "alias": [
+    "stats.service.t-fk.no"
+  ],
+  "type": "docker",
+  "dotenv": "production.env",
+  "scale": {
+    "bru1": {
+      "min": 0,
+      "max": "auto"
+    }
+  },
+  "features": {
+    "cloud": "v2"
+  }
+}
