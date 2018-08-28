@@ -21,7 +21,7 @@
     "standard-fix": "standard --fix",
     "start": "micro",
     "dev": "micro-dev -H localhost",
-    "now-deploy": "npm test && now --npm && now alias",
+    "deploy": "npm test && now && now alias",
     "refresh": "rm -rf node_mdoules && rm package-lock.json && npm install"
   },
   "keywords": [
