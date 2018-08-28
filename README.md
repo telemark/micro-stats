@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/micro-stats.svg?branch=master)](https://travis-ci.org/telemark/micro-stats)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/micro-stats.svg)](https://greenkeeper.io/)
 
 # micro-stats
 
@@ -40,5 +39,3 @@ $ curl -v http://localhost:3000/stats/minelev
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of micro-stats](https://robots.kebabstudios.party/micro-stats.png "Robohash image of micro-stats")
