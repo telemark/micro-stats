@@ -6,7 +6,7 @@ const logger = require('./logger')
 
 module.exports = id => {
   return new Promise((resolve, reject) => {
-    const payload = {system: id}
+    const payload = { system: id }
 
     logger('info', ['get-stats', 'system', id])
 

@@ -6,10 +6,10 @@ const logger = require('./logger')
 
 module.exports = options => {
   return new Promise((resolve, reject) => {
-    const payload = Object.assign(options.data, {system: options.id})
+    const payload = Object.assign(options.data, { system: options.id })
     const mongoOptions = {
-      query: {system: options.id},
-      update: {'$set': payload},
+      query: { system: options.id },
+      update: { '$set': payload },
       new: true,
       upsert: true
     }
