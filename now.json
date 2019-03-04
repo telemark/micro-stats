@@ -7,16 +7,13 @@
   "env": {
     "NODE_ENV": "production",
     "DB": "@azure-cosmos-felles-connection",
-    "COLLECTION": "stats"
+    "COLLECTION": "stats",
+    "JWT_SECRET": "@tfk-jwt-secret"
   },
   "builds": [
     { "src": "/index.js", "use": "@now/node" }
   ],
   "routes": [
     { "src": "/(.*)", "dest": "/index.js" }
-  ],
-  "dotenv": "production.env",
-  "features": {
-    "cloud": "v2"
-  }
+  ]
 }
