@@ -1,19 +1,35 @@
 {
   "version": 2,
   "name": "micro-stats",
+  "scope": "telemark",
   "alias": [
     "stats.service.t-fk.no"
   ],
   "env": {
     "NODE_ENV": "production",
-    "DB": "@azure-cosmos-felles-connection",
-    "COLLECTION": "stats",
+    "MONGODB_CONNECTION": "@azure-cosmos-felles-connection",
+    "MONGODB_COLLECTION": "stats",
+    "MONGODB_NAME": "felles",
     "JWT_SECRET": "@tfk-jwt-secret"
   },
   "builds": [
-    { "src": "/index.js", "use": "@now/node" }
+    {
+      "src": "/*.md",
+      "use": "@now/md"
+    },
+    {
+      "src": "/index.js",
+      "use": "@now/node"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/index.js" }
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
   ]
 }
