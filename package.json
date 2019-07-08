@@ -47,6 +47,6 @@
   "dependencies": {
     "jsonwebtoken": "8.5.1",
     "micro": "9.3.4",
-    "mongodb": "3.2.5"
+    "mongodb": "3.2.7"
   }
 }
