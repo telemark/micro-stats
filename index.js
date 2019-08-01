@@ -1,14 +1,12 @@
-const url = require('url')
 const { json } = require('micro')
 const setStats = require('./lib/set-stats')
 const getStats = require('./lib/get-stats')
 const validateToken = require('./lib/validate-token')
 const logger = require('./lib/logger')
-let cache = {}
+const cache = {}
 
 module.exports = async (request, response) => {
-  const pathname = url.parse(request.url).pathname
-  const id = pathname.split('/').pop().toLowerCase()
+  const id = request.url.split('/').pop().toLowerCase()
   const method = request.method.toLowerCase()
   let result = {}
 
