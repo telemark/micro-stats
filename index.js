@@ -1,4 +1,3 @@
-const { json } = require('micro')
 const setStats = require('./lib/set-stats')
 const getStats = require('./lib/get-stats')
 const validateToken = require('./lib/validate-token')
@@ -41,7 +40,7 @@ module.exports = async (request, response) => {
       return
     }
     try {
-      const data = await json(request)
+      const data = request.body
       const options = {
         id: id,
         data: data
