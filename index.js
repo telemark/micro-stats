@@ -2,7 +2,6 @@ const setStats = require('./lib/set-stats')
 const getStats = require('./lib/get-stats')
 const validateToken = require('./lib/validate-token')
 const logger = require('./lib/logger')
-const cache = {}
 
 module.exports = async (request, response) => {
   const id = request.url.split('/').pop().toLowerCase()
@@ -10,16 +9,10 @@ module.exports = async (request, response) => {
   let result = {}
 
   if (method === 'get') {
-    const cached = cache[id]
-    if (!cached) {
-      try {
-        result = await getStats(id)
-        cache[id] = result
-      } catch (error) {
-        logger('error', ['get', error])
-      }
-    } else {
-      result = cached
+    try {
+      result = await getStats(id)
+    } catch (error) {
+      logger('error', ['get', error])
     }
   } else if (method === 'post') {
     const bearerToken = request.headers.authorization
