@@ -7,9 +7,9 @@
   ],
   "env": {
     "NODE_ENV": "production",
-    "MONGODB_CONNECTION": "@db-tfkcosmos-connection",
-    "MONGODB_COLLECTION": "stats",
-    "MONGODB_NAME": "felles",
+    "MONGODB_CONNECTION": "@db-cosmos-prod-connection",
+    "MONGODB_COLLECTION": "robot-stats",
+    "MONGODB_NAME": "shared",
     "JWT_SECRET": "@tfk-jwt-secret"
   },
   "builds": [
