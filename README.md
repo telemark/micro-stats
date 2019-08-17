@@ -5,6 +5,12 @@
 
 Stats service
 
+## Setup
+
+You'll need a database compatible with the MongoDB API.
+
+If you are using CosmosDB your shard key has to be "system".
+
 ## API
 
 ### ```POST /stats/:system```
