@@ -40,7 +40,7 @@ module.exports = async (request, response) => {
       return
     }
     try {
-      const data = request.body
+      const data = await request.body
       const options = {
         id: id,
         data: data
