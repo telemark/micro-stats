@@ -26,8 +26,8 @@ module.exports = async (request, response) => {
     if (!bearerToken) {
       const msg = 'missing Authorization header'
       logger('warn', ['set', msg])
-      response.writeHead(401)
-      response.end('missing Authorization header')
+      response.status(401)
+      response.send('missing Authorization header')
       return
     }
     try {
@@ -35,8 +35,8 @@ module.exports = async (request, response) => {
       await validateToken(token)
     } catch (error) {
       logger('error', ['token-auth', error])
-      response.writeHead(401)
-      response.end('invalid token in Authorization header')
+      response.status(401)
+      response.send('invalid token in Authorization header')
       return
     }
     try {
@@ -50,6 +50,5 @@ module.exports = async (request, response) => {
       logger('error', ['set', error])
     }
   }
-  response.writeHead(200)
-  response.end(JSON.stringify(result, null, 2))
+  response.json(result)
 }
