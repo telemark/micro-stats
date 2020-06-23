@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "name": "minelev-robot-stats-test",
+  "scope": "vtfk",
+  "alias": [
+    "robot-stats.minelev.vtfk.dev"
+  ],
+  "env": {
+    "NODE_ENV": "production",
+    "MONGODB_CONNECTION": "@minelev-test-db-connection",
+    "MONGODB_COLLECTION": "@minelev-test-db-collection-robot-stats",
+    "MONGODB_NAME": "@minelev-test-db-name",
+    "JWT_SECRET": "@minelev-test-robot-stats-jwt"
+  },
+  "builds": [
+    {
+      "src": "/*.md",
+      "use": "@now/md"
+    },
+    {
+      "src": "/index.js",
+      "use": "@now/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/README.html"
+    },
+    {
+      "src": "/stats/(.*)",
+      "dest": "/index.js",
+      "headers": {
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+        "Access-Control-Allow-Methods": "GET, OPTIONS, OPTIONS",
+        "Access-Control-Allow-Credentials": "true",
+        "Access-Control-Max-Age": "3600",
+        "Content-Type": "application/json; charset=utf-8"
+      }
+    }
+  ]
+}
